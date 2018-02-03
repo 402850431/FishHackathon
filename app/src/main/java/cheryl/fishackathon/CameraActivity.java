@@ -61,6 +61,11 @@ public class CameraActivity extends AppCompatActivity {
 //        ImagePicker.setMinQuality(600, 600);
 
     }
+
+    public void nextOnClick(View view){
+        startActivity(new Intent(this, SellActivity.class));
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
