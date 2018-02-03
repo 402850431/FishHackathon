@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Fishackathon.iml" filepath="$PROJECT_DIR$/Fishackathon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FishHackathon.iml" filepath="$PROJECT_DIR$/FishHackathon.iml" />
+      <module fileurl="file://D:\data\My_Documents\FishHackathon\Fishackathon.iml" filepath="D:\data\My_Documents\FishHackathon\Fishackathon.iml" />
+      <module fileurl="file://D:\data\My_Documents\FishHackathon\app\app.iml" filepath="D:\data\My_Documents\FishHackathon\app\app.iml" />
     </modules>
   </component>
 </project>
