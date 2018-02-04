@@ -89,7 +89,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:paddingBottom="8dp"
                     android:text="10:30" />
 
                 <TextView
@@ -121,6 +120,15 @@
                         android:ems="10" />
                 </LinearLayout>
             </LinearLayout>
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyle"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:rating="4.2"
+                android:isIndicator="true" />
         </LinearLayout>
     </ScrollView>
 

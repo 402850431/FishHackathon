@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fishackathon</string>
+    <string name="app_name">Fishop</string>
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -8,8 +8,8 @@
     <string name="title_activity_buy_succeed">BuySucceedActivity</string>
     <string name="pick_image_intent_text">選擇圖片</string>
     <string name="label_select_picture">Select Picture</string>
-    <string name="title">下單成功</string>
-    <string name="content">若要查看訂單，請至會員中心確認。</string>
-    <string name="ok">確定</string>
+    <string name="title">Success</string>
+    <string name="content">If you want to see the order form, please go check in personal account.</string>
+    <string name="ok">OK</string>
 
 </resources>
