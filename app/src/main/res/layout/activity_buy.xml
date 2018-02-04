@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:text="John Cena" />
+                    android:text="@string/john_cena" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -156,7 +156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="0913-246-574" />
+                        android:text="@string/phone" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -169,18 +169,16 @@
                 android:stepSize="0.1"
                 android:rating="4.2"
                 android:isIndicator="true" />
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent2"
+                android:layout_gravity="bottom"
+                android:text="BUY THIS FISH" />
         </LinearLayout>
+
     </ScrollView>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <Button
-            android:id="@+id/buyBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent2"
-            android:layout_gravity="bottom"
-            android:text="BUY THIS FISH" />
-    </FrameLayout>
 </LinearLayout>

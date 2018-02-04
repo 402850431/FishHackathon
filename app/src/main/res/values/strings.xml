@@ -11,5 +11,7 @@
     <string name="title">Success</string>
     <string name="content">If you want to see the order form, please go check in personal account.</string>
     <string name="ok">OK</string>
+    <string name="john_cena">John Cena</string>
+    <string name="phone">0913-246-574</string>
 
 </resources>
