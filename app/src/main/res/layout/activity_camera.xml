@@ -52,11 +52,22 @@
                     android:text="PRICE" />
 
                 <EditText
-                    android:id="@+id/editText6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="100"
+                    android:text="100 /per"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:inputType="number" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUANTITY" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="200"
                     android:textColor="@color/colorPrimaryDark"
                     android:inputType="number" />
 
