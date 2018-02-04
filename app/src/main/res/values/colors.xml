@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#003B46</color>
     <color name="colorAccent">#F59018</color>
     <color name="colorAccent2">#cbb37b</color>
+    <color name="middlePink">#F59018</color>
+
 </resources>

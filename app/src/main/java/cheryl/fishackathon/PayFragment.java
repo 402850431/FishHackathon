@@ -1,29 +1,42 @@
 package cheryl.fishackathon;
 
 
+import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 
+import cheryl.fishackathon.Dialog.MyDialog;
+import cheryl.fishackathon.Dialog.MyDialogListener;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class PayFragment extends Fragment {
-
-
-    public PayFragment() {
-        // Required empty public constructor
-    }
-
+public class PayFragment extends AppCompatActivity {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pay, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_pay);
+
+        findViewById(R.id.payBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                MyDialog myDialog = new MyDialog(PayFragment.this);
+                myDialog.setListener(new MyDialogListener() {
+                    @Override
+                    public void isUserAgreed() {
+                        startActivity(new Intent(PayFragment.this, MainActivity.class));
+                    }
+
+                    @Override
+                    public void isUserCanceled() {
+
+                    }
+                });
+                myDialog.simpleDialog().show();
+            }
+        });
     }
 
 }

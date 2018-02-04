@@ -8,5 +8,8 @@
     <string name="title_activity_buy_succeed">BuySucceedActivity</string>
     <string name="pick_image_intent_text">選擇圖片</string>
     <string name="label_select_picture">Select Picture</string>
+    <string name="title">下單成功</string>
+    <string name="content">若要查看訂單，請至會員中心確認。</string>
+    <string name="ok">確定</string>
 
 </resources>
