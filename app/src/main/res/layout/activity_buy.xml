@@ -129,6 +129,6 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent2"
             android:layout_gravity="bottom"
-            android:text="FINISH" />
+            android:text="BUY THIS FISH" />
     </FrameLayout>
 </LinearLayout>

@@ -10,6 +10,7 @@
 
     <LinearLayout
         android:id="@+id/card1"
+        android:onClick="card1OnClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -39,20 +40,37 @@
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right|end"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/clock"
+                    android:tint="@android:color/holo_red_dark"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:padding="8dp"
                     android:text="14:30"
-                    android:textColor="@android:color/black"/>
-
-
+                    android:textColor="@android:color/holo_red_dark"/>
+                </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/money"
+                    android:tint="@android:color/holo_orange_light"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,13 +78,25 @@
                     android:text="NT.100 / per"
                     android:textColor="@android:color/black"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_info_location"/>
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="right|end"
                     android:padding="8dp"
                     android:text="Taipei,Daan"
                     android:textColor="@android:color/black"/>
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

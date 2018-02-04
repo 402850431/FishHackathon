@@ -42,4 +42,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void card1OnClick(View view){
+        startActivity(new Intent(MainActivity.this,BuyActivity.class));
+    }
 }

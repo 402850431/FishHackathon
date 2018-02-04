@@ -70,8 +70,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:text="100 /per"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:inputType="number" />
+                    android:textColor="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -86,8 +85,7 @@
                     android:textSize="18sp"
                     android:text="200"
                     android:paddingBottom="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:inputType="number" />
+                    android:textColor="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:layout_width="match_parent"
