@@ -39,38 +39,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:padding="8dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
                     android:text="blue gill" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="QUANTITY" />
+                    android:text="PRICE" />
 
-                <EditText
-                    android:id="@+id/editText"
+                <TextView
+                    android:id="@+id/editText6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    tools:text="3" />
+                    android:inputType="number"
+                    android:paddingBottom="8dp"
+                    android:text="100 /per"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="PAYMENT" />
+                    android:text="QUANTITY" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:paddingBottom="8dp"
+                    android:text="200"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
-                    tools:text="VISA" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -80,7 +79,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="14 : 30"
+                    android:text="10:30"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="24sp" />
 
