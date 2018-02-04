@@ -46,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="blue gill"
+                    android:text="吳郭魚"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
@@ -130,38 +130,52 @@
                 android:layout_margin="8dp"
                 android:background="@android:color/darker_gray" />
 
+        <LinearLayout
+            android:onClick="goMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/head"
+                android:scaleType="centerCrop"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:padding="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/john_cena"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="24sp"
+                    />
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="end"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@mipmap/phone" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/phone" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone"
+                    />
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/phone" />
                 </LinearLayout>
             </LinearLayout>
+        </LinearLayout>
 
             <RatingBar
                 android:id="@+id/rating"
@@ -169,6 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
+                android:layout_gravity="center"
                 android:numStars="5"
                 android:rating="4.2"
                 android:stepSize="0.1" />

@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -51,25 +52,47 @@ public class CameraActivity extends AppCompatActivity {
     protected static final int REQUEST_STORAGE_WRITE_ACCESS_PERMISSION = 102;
     AlertDialog mAlertDialog;
     ImageView imageView;
+    TextView name, price, quantity;
+    Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        imageView = (ImageView) findViewById(R.id.imageView);
 //        ImagePicker.setMinQuality(600, 600);
+        findViewByIds();
 
     }
 
+    private void findViewByIds() {
+        imageView = (ImageView) findViewById(R.id.imageView);
+        name = (TextView) findViewById(R.id.name);
+        price = (TextView) findViewById(R.id.price);
+        quantity = (TextView) findViewById(R.id.quantity);
+    }
+
+
     public void nextOnClick(View view){
-        startActivity(new Intent(this, SellActivity.class));
+
+        Bitmap image= imageView.getDrawingCache();
+        Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        if(bundle!=null) {
+            bundle.putParcelable("imagebitmap", image);
+            bundle.putString("name", name.getText().toString());
+            bundle.putString("price", price.getText().toString());
+            bundle.putString("quantity", quantity.getText().toString());
+            intent.putExtras(bundle);
+            intent.setClass(this, SellActivity.class);
+        }
+            startActivity(intent);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Bitmap bitmap = ImagePicker.getImageFromResult(this, requestCode, resultCode, data);
+        bitmap = ImagePicker.getImageFromResult(this, requestCode, resultCode, data);
 //        imageView.setImageBitmap(bitmap);
         if (resultCode == RESULT_OK) {
             if (requestCode == REQUEST_SELECT_PICTURE) {
@@ -175,10 +198,6 @@ public class CameraActivity extends AppCompatActivity {
         final Uri resultUri = UCrop.getOutput(result);
         if (resultUri != null) {
 
-//            Glide.with(this)
-//                    .load(new File(resultUri.getPath()))
-//                    .apply(RequestOptions.centerCropTransform())
-//                    .into(imageView);
             saveCroppedImage(resultUri);
         } else {
             Toast.makeText(this, "無法顯示選擇的圖片", Toast.LENGTH_SHORT).show();

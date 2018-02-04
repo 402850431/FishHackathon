@@ -10,6 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scrollbars="none"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                     android:text="NAME" />
 
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
@@ -51,26 +52,53 @@
                     android:layout_height="wrap_content"
                     android:text="PRICE" />
 
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="100 /per"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:inputType="number" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NT." />
+
+                    <EditText
+                        android:id="@+id/price"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/per" />
+
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="QUANTITY" />
 
-                <EditText
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="200"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:inputType="number" />
+                    android:orientation="horizontal">
 
+                    <EditText
+                        android:id="@+id/quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="200"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:inputType="number" />
+
+                </LinearLayout>
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
@@ -103,7 +131,7 @@
                         android:layout_height="match_parent"
                         android:src="@mipmap/ic_info_location"/>
                     <TextView
-                        android:id="@+id/editText8"
+                        android:id="@+id/location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
@@ -115,19 +143,11 @@
                         android:ems="10" />
                 </LinearLayout>
             </LinearLayout>
+
+            <include
+                layout="@layout/include_button_blue"/>
         </LinearLayout>
     </ScrollView>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <Button
-            android:onClick="nextOnClick"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent2"
-            android:layout_gravity="bottom"
-            android:text="NEXT" />
 
-    </FrameLayout>
 </LinearLayout>

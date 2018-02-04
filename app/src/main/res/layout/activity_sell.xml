@@ -9,28 +9,29 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/sellImg"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_gravity="center"
-                android:onClick="onPickImage"
                 android:background="@android:color/darker_gray"
-                android:src="@drawable/upload" />
+                android:onClick="onPickImage"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fish_demo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
                 android:orientation="vertical"
-                >
+                android:padding="8dp">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -38,13 +39,13 @@
                     android:text="NAME" />
 
                 <TextView
-                    android:id="@+id/editText5"
+                    android:id="@+id/sellName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:inputType="textPersonName"
                     android:text="blue gill"
                     android:textColor="@color/colorPrimaryDark"
-                    android:inputType="textPersonName" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -53,11 +54,12 @@
                     android:text="BINOMIAL NAME" />
 
                 <TextView
+                    android:id="@+id/sellBinomialName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="asdf"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:text="Cichlidae"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -65,12 +67,24 @@
                     android:layout_marginTop="8dp"
                     android:text="PRICE" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="100 /per"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sellPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" /per" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -78,13 +92,25 @@
                     android:layout_marginTop="8dp"
                     android:text="QUANTITY" />
 
-                <TextView
-                    android:id="@+id/editText6"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="200"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NT." />
+
+                    <TextView
+                        android:id="@+id/sellQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -95,37 +121,39 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
+                    android:text="10:30"
                     android:textColor="@color/colorPrimaryDark"
-                    android:text="10:30" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
                     android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
                     android:text="LOCATION" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
-                        android:src="@mipmap/ic_info_location"/>
+                        android:src="@mipmap/ic_info_location" />
+
                     <TextView
                         android:id="@+id/editText8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:layout_marginLeft="8dp"
                         android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
                         android:text="Taipei, Daan"
-                        android:textSize="18sp"
                         android:textColor="@color/colorPrimaryDark"
-                        android:ems="10" />
+                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

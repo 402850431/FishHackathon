@@ -20,12 +20,23 @@ public class MainActivity extends AppCompatActivity {
     TextView price1,price2,price3,price4,price5;
     TextView address1,address2,address3,address4,address5;
 
+    boolean show = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null) {
+            show = bundle.getBoolean("show", false);
+            if (show) {
+                View card = findViewById(R.id.myCard);
+                card.setVisibility(View.VISIBLE);
+            }
+        }
 
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
@@ -44,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-//        startActivity(new Intent(MainActivity.this,BuyActivity.class));
+        startActivity(new Intent(MainActivity.this,MemberActivity.class));
         return true;
     }
 
@@ -64,7 +75,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void card1OnClick(View view){
-        Bundle bundle = new Bundle();
         startActivity(new Intent(MainActivity.this,BuyActivity.class));
     }
+    public void goMember(View view){
+        startActivity(new Intent(MainActivity.this,MemberActivity.class));
+    }
+
 }
