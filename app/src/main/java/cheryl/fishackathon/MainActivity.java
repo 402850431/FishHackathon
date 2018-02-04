@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void card1OnClick(View view){
+        Bundle bundle = new Bundle();
         startActivity(new Intent(MainActivity.this,BuyActivity.class));
     }
 }
