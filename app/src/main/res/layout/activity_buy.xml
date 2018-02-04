@@ -39,7 +39,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-<<<<<<< HEAD
                     android:text="NAME" />
 
                 <TextView
@@ -50,13 +49,6 @@
                     android:text="吳郭魚"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
-=======
-                    android:padding="8dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:text="blue gill" />
->>>>>>> 1bf90baef3c8b8f0af176bdc4ee69facf52de998
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -67,8 +59,7 @@
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     tools:text="3" />
 
                 <TextView
@@ -79,10 +70,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
                     android:paddingBottom="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     tools:text="VISA" />
 
                 <TextView

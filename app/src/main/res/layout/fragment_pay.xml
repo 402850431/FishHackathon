@@ -1,21 +1,197 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@android:color/white"
     android:clickable="true"
-    tools:context="cheryl.fishackathon.PayFragment">
+    android:id="@+id/buyFrame"
+    tools:context="cheryl.fishackathon.CameraActivity">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/payBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent2"
-        android:layout_gravity="bottom"
-        android:text="PAY" />
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:background="@android:color/darker_gray"
+                android:onClick="onPickImage"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fish_demo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="NAME" />
+
+                <TextView
+                    android:id="@+id/editText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="吳郭魚"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="QUANTITY" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    tools:text="3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PAYMENT" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    tools:text="VISA" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TIME" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="14 : 30"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="LOCATION" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_info_location" />
+
+                    <TextView
+                        android:id="@+id/editText8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:text="Taipei, Daan"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:onClick="goMember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/head"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/john_cena"
+                        android:textSize="24sp"
+                        />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/phone" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="4.2"
+                android:stepSize="0.1" />
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/colorAccent2"
+                android:text="BUY THIS FISH" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

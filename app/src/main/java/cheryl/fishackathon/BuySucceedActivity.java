@@ -3,6 +3,7 @@ package cheryl.fishackathon;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -22,6 +23,18 @@ public class BuySucceedActivity extends AppCompatActivity {
             public void onClick(View view) {
             }
         });
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.show();
+        }
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        //up button pressed. pop back stack.
+        onBackPressed();
+        return true;
+    }
 }

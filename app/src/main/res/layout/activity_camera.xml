@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="blue gill"
+                    android:text="鯁魚"
                     android:textColor="@color/colorPrimaryDark"
                     android:inputType="textPersonName" />
 
@@ -123,8 +123,11 @@
                     android:text="LOCATION" />
 
                 <LinearLayout
+                    android:onClick="openMap"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
                     android:orientation="horizontal">
                     <ImageView
                         android:layout_width="30dp"
@@ -137,10 +140,10 @@
                         android:gravity="center_vertical"
                         android:layout_marginLeft="8dp"
                         android:layout_marginStart="8dp"
-                        android:text="Taipei, Daan"
                         android:textSize="18sp"
                         android:textColor="@color/colorPrimaryDark"
                         android:ems="10" />
+                    <!--android:text="Taipei, Daan"-->
                 </LinearLayout>
             </LinearLayout>
 

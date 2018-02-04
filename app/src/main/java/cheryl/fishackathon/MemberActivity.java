@@ -16,7 +16,6 @@ public class MemberActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.show();
         }
-
     }
 
     @Override

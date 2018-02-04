@@ -2,6 +2,7 @@ package cheryl.fishackathon;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,17 @@ public class BuyActivity extends AppCompatActivity {
             }
         });
 
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.show();
+        }
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        //up button pressed. pop back stack.
+        onBackPressed();
+        return true;
+    }
 }
