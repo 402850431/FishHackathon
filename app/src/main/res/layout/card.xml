@@ -75,6 +75,7 @@
                     android:src="@mipmap/money"
                     android:tint="@android:color/holo_orange_light"/>
                 <TextView
+                    android:id="@+id/price1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -92,9 +93,10 @@
                         android:layout_height="match_parent"
                         android:src="@mipmap/ic_info_location"/>
                 <TextView
+                    android:id="@+id/location1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="right|end"
+                    android:gravity="end"
                     android:padding="8dp"
                     android:text="Taipei,Daan"
                     android:textColor="@android:color/black"/>
