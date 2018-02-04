@@ -39,51 +39,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-<<<<<<< HEAD
-                    android:text="NAME" />
-
-                <TextView
-                    android:id="@+id/editText5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="吳郭魚"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
-=======
-                    android:padding="8dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
                     android:text="blue gill" />
->>>>>>> 1bf90baef3c8b8f0af176bdc4ee69facf52de998
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="QUANTITY" />
+                    android:text="PRICE" />
 
-                <EditText
-                    android:id="@+id/editText"
+                <TextView
+                    android:id="@+id/editText6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    tools:text="3" />
+                    android:inputType="number"
+                    android:paddingBottom="8dp"
+                    android:text="100 /per"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="PAYMENT" />
+                    android:text="QUANTITY" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:paddingBottom="8dp"
+                    android:text="200"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
-                    tools:text="VISA" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -93,7 +79,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="14 : 30"
+                    android:text="10:30"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="24sp" />
 
@@ -135,52 +121,38 @@
                 android:layout_margin="8dp"
                 android:background="@android:color/darker_gray" />
 
-        <LinearLayout
-            android:onClick="goMember"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/head"
-                android:scaleType="centerCrop"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="8dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/john_cena"
-                    android:textSize="24sp"
-                    />
-
-
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
+                    android:gravity="end"
                     android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/phone" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/phone"
-                    />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/phone" />
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/phone" />
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
             <RatingBar
                 android:id="@+id/rating"
@@ -188,7 +160,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
-                android:layout_gravity="center"
                 android:numStars="5"
                 android:rating="4.2"
                 android:stepSize="0.1" />
